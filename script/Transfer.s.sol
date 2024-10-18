@@ -10,9 +10,6 @@ contract TransferScript is Script {
 
   function run() public {
     uint256 privateKey = vm.envUint("PRIVATE_KEY");
-    // Set balance of the specified address to 1000 ETH
-    // address targetAddress = 0x8680c6Ad2c2D13EeD71F22b856b2EE158A299C09;
-    // vm.deal(targetAddress, 9000 ether);
 
     vm.startBroadcast(privateKey);
     Transfer transfer = new Transfer();
